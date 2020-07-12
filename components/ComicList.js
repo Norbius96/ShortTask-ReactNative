@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
+import ComicPost from './ComicPost';
+
 export default function ComicList() {
 
     const [comics, setComics] = useState([]);
@@ -18,9 +20,8 @@ export default function ComicList() {
                 const response = await fetch(URL);
                 const comicStory = await response.json();
                 setComics(comics => [...comics, comicStory]);
-
             } catch (err) {
-                console.log('Sorry, we have a problem ... :(');
+                alert('Sorry, we have a problem ... :(');
             }
         }
     }
@@ -32,7 +33,7 @@ export default function ComicList() {
             {
                 comics.map((comic, idx) => {
                     return (
-                        <Text style={styles.text}>{comic.title}</Text>
+                        <ComicPost key={idx} title={comic.title} transcript={comic.transcript} img={comic.img} />
                     )
                 })
             }

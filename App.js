@@ -16,27 +16,12 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#000',
         paddingTop: 100,
-        paddingLeft: 30,
-        paddingRight: 30
+        paddingLeft: 15,
+        paddingRight: 15,
+        paddingBottom: 30
     },
     text: {
         color: '#fff'
-    },
-    button: {
-        width: 150,
-        height: 50,
-        backgroundColor: '#0EBFE9',
-        display: 'flex',
-        alignContent: 'center',
-        justifyContent: 'center',
-        borderRadius: 3
-
-    },
-    buttonText: {
-        textAlign: 'center',
-        color: '#f0f0f0',
-        fontSize: 20
     }
 });
