@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { HeaderBackground } from '@react-navigation/stack';
 
 export default function ComicPost({ title, img }) {
 
@@ -21,7 +22,8 @@ const styles = StyleSheet.create({
         marginTop: 10,
         borderRadius: 3,
         borderWidth: 1,
-        borderColor: '#e0e0e0'
+        borderColor: '#e0e0e0',
+        backgroundColor: '#fff'
     },
     title: {
         fontSize: 26,

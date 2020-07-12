@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import ComicPost from './ComicPost';
 
@@ -29,7 +29,7 @@ export default function ComicList() {
 
 
     return (
-        <View>
+        <View style={styles.container}>
             {
                 comics.map((comic, idx) => {
                     return (
@@ -42,11 +42,7 @@ export default function ComicList() {
 }
 
 const styles = StyleSheet.create({
-    text: {
-        color: '#fff'
-    },
-    image: {
-        width: '80%',
-        height: 160
+    container: {
+        padding: 10
     }
 });
