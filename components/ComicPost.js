@@ -1,14 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { HeaderBackground } from '@react-navigation/stack';
+import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
 
-export default function ComicPost({ title, img }) {
+
+export default function ComicPost({ title, img, navigation }) {
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>{title}</Text>
-            <Image source={{ uri: img }} style={styles.img} />
-        </View>
+        <TouchableHighlight onPress={() => navigation.navigate('Details', { img: img, title: title })}>
+            <View style={styles.container}>
+                <Text style={styles.title}>{title}</Text>
+                <Image source={{ uri: img }} style={styles.img} />
+            </View>
+        </TouchableHighlight>
     )
 
 }
